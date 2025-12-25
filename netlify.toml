@@ -1,9 +1,7 @@
 [build]
-  # This command runs your build script using the local Angular CLI
   command = "npm run build"
-  # This must match exactly what is in your angular.json "outputPath"
-  publish = "dist/urban-builtform-architects/browser"
+  # ERROR SAID: Please set it to "dist/urban_builtform/browser"
+  publish = "dist/urban_builtform/browser"
 
 [environment]
-  # Force Netlify to use the stable version of Node
   NODE_VERSION = "20"
