@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+
+/* 1. Import Fonts (Montserrat for Headings, Open Sans for Text) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+/* 2. Global Reset */
+html {
+    scroll-behavior: smooth; /* This makes the jump to "Contact" smooth, not instant */
+    overflow-x: hidden; 
+    width: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Default text font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevents side-scrolling on mobile */
+    overflow-x: hidden; 
+    width: 100%;
+}
+
+/* 3. Apply Heading Font Globally */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 4. Professional Scrollbar (Optional - makes the browser scrollbar look modern) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cccccc; 
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FF4500; /* Turns Brand Red when you grab it */
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation Classes */
+.animate-fade-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0; /* Start hidden */
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* Selection Color (Makes highlighting text look premium) */
+::selection {
+    background-color: #FF4500;
+    color: white;
+}

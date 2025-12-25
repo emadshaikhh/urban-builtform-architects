@@ -1,0 +1,36 @@
+<nav class="fixed w-full bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        
+        <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-[#FF4500] text-white flex items-center justify-center font-bold text-lg rounded-sm shadow-md">
+                UB
+            </div>
+            <div class="text-xl font-bold tracking-wider text-gray-800">
+                URBAN BUILTFORM
+            </div>
+        </div>
+
+        <ul class="hidden md:flex space-x-8 text-sm uppercase tracking-wide font-medium text-gray-600">
+            <li><a href="#home" class="hover:text-[#FF4500] transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-[#FF4500] transition-colors">About</a></li>
+            <li><a href="#services" class="hover:text-[#FF4500] transition-colors">Services</a></li>
+            <li><a href="#projects" class="hover:text-[#FF4500] transition-colors">Projects</a></li>
+            <li><a href="#contact" class="hover:text-[#FF4500] transition-colors">Contact</a></li>
+        </ul>
+        
+        <button (click)="toggleMenu()" class="md:hidden text-2xl text-gray-800 focus:outline-none">
+            <span *ngIf="isMenuOpen">✕</span> 
+            <span *ngIf="!isMenuOpen">☰</span>
+        </button>
+    </div>
+
+    <div *ngIf="isMenuOpen" class="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl animate-fade-up">
+        <ul class="flex flex-col py-4 px-6 space-y-4 text-sm uppercase tracking-wide font-medium text-gray-600">
+            <li><a (click)="toggleMenu()" href="#home" class="block hover:text-[#FF4500]">Home</a></li>
+            <li><a (click)="toggleMenu()" href="#about" class="block hover:text-[#FF4500]">About</a></li>
+            <li><a (click)="toggleMenu()" href="#services" class="block hover:text-[#FF4500]">Services</a></li>
+            <li><a (click)="toggleMenu()" href="#projects" class="block hover:text-[#FF4500]">Projects</a></li>
+            <li><a (click)="toggleMenu()" href="#contact" class="block hover:text-[#FF4500]">Contact</a></li>
+        </ul>
+    </div>
+</nav>
